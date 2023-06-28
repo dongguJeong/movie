@@ -169,6 +169,7 @@ function Coming() {
   
   const movieMatch = useMatch("coming-soon/movies/:id");
 
+  
   const Details = useQuery<IMovieDetail>(["movies", "detail"], () =>
     getMovie(movieMatch?.params.id || " ")
   );
